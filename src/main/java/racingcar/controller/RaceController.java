@@ -12,7 +12,7 @@ public class RaceController {
     public void start() {
         inputCars();
         inputNumberOfAttemptMove();
-
+        startRace();
     }
 
     private void inputCars() {
@@ -32,5 +32,9 @@ public class RaceController {
             System.out.println(e.getMessage());
             race.inputNumberOfAttemptMove();
         }
+    }
+
+    private void startRace() {
+        race.start();
     }
 }
