@@ -7,8 +7,8 @@ public class Name {
     private final String name;
 
     public Name(String name) {
-        if (name.length() > CAR_NAME_LIMIT_LENGTH) {
-            throw new IllegalArgumentException(Message.ERROR_MESSAGE + "CAR 이름은 5글자 이하만 가능합니다.");
+        if (name.length() < 1 || name.length() > CAR_NAME_LIMIT_LENGTH) {
+            throw new IllegalArgumentException(Message.ERROR_MESSAGE + Message.ERROR_CAR_NAME_LENGTH);
         }
 
         this.name = name;
