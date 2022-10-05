@@ -26,8 +26,9 @@ class CarTest {
         Car car = new Car("Messi");
         car.move();
 
-        assertThat(car.getDistance()).isEqualTo(1);
+        assertThat(car.getDistance().getIntDistance()).isEqualTo(1);
         car.move();
-        assertThat(car.getDistance()).isEqualTo(2);
+        assertThat(car.getDistance().getIntDistance()).isEqualTo(2);
+        assertThat(car.getDistance().getStrDistance()).isEqualTo("--");
     }
 }

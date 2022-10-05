@@ -8,12 +8,16 @@ public class Car {
     private Distance distance;
 
     public Car() {
-
     }
 
     public Car(String name) {
         this.name = new Name(name);
         this.distance = new Distance();
+    }
+
+    public Car(String name, int distance) {
+        this.name = new Name(name);
+        this.distance = new Distance(distance);
     }
 
     public void setName(String name) {
@@ -24,8 +28,8 @@ public class Car {
         return this.name.getName();
     }
 
-    public int getDistance() {
-        return this.distance.getDistance();
+    public Distance getDistance() {
+        return this.distance;
     }
 
     public void move() {
