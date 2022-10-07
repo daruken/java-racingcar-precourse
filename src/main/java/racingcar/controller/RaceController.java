@@ -17,11 +17,11 @@ public class RaceController {
 
     private void inputCars() {
         try {
+            race.initCars();
             race.inputCars();
         } catch(IllegalArgumentException e) {
             System.out.println(e.getMessage());
-            race.initCars();
-            race.inputCars();
+            inputCars();
         }
     }
 
@@ -30,7 +30,7 @@ public class RaceController {
             race.inputNumberOfAttemptMove();
         } catch(IllegalArgumentException e) {
             System.out.println(e.getMessage());
-            race.inputNumberOfAttemptMove();
+            inputNumberOfAttemptMove();
         }
     }
 
